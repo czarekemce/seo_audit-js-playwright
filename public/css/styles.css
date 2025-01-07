@@ -1,0 +1,173 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center; /* Wyśrodkowanie formularza poziomo */
+    align-items: center; /* Wyśrodkowanie formularza pionowo */
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    background: url('images/galaxy.jpg') no-repeat center center fixed;
+    background-size: cover;
+    animation: galaxyAnimation 60s linear infinite;
+}
+
+/* Animacja przesuwająca tło */
+@keyframes galaxyAnimation {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+/* Nagłówek */
+h1 {
+    font-size: 5em;
+    color: white;
+    text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.7), 0px 0px 30px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    animation: reveal 6s ease-out forwards;
+}
+
+/* Animacja wyłaniania napisu */
+@keyframes reveal {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+/* Formularz */
+form {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 40px 120px;  /* Mniejszy padding */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    width: 90%;
+    max-width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+    margin: 0 auto; /* Wyśrodkowanie formularza */
+    margin-left: -70px; /* Przesunięcie formularza o 30px w lewo */
+}
+
+/* Label dla input */
+label {
+    font-size: 5.2em;
+    width: 120px;
+    color: white;
+}
+
+/* Pole tekstowe */
+input[type="url"] {
+    padding: 10px;
+    width: 70%;
+    font-size: 1.2em;
+    border-radius: 5px;
+    border: 2px solid #fff;
+    background-color: transparent;
+    color: white;
+    margin-bottom: 0;
+
+}
+
+/* Przycisk */
+button {
+    background-color: #4CAF50;
+    padding: 12px 20px;
+    font-size: 1.1em;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    white-space: nowrap;
+    display: inline-block;
+    width: auto;
+    margin-left: 40px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Wyniki */
+#results {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    color: white;
+}
+
+#seoResults p {
+    margin: 10px 0;
+}
+
+#loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* półprzezroczysty czarny */
+    display: none; /* Domyślnie ukryty */
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Zapewnia, że overlay jest na wierzchu */
+}
+
+/* Komunikat */
+#loading-message {
+    color: white;
+    font-size: 3em;
+    font-weight: bold;
+    text-align: center;
+    animation: fadeIn 2s;
+}
+
+/* Animacja wyłaniania tekstu */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.pulsating-text {
+    animation: pulsate 3.5s infinite ease-in-out !important;
+  }
+  
+  /* Definicja animacji */
+  @keyframes pulsate {
+    0% {
+      opacity: 0.5;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.1); /* Delikatne powiększenie */
+    }
+    100% {
+      opacity: 0.5;
+      transform: scale(1);
+    }
+  }
+  
+

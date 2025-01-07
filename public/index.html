@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEO Audit</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>SEO Audit</h1>
+        <form id="seo-form">
+            <input type="url" id="website-url" placeholder="Enter website URL" required>
+            <button type="submit">Start Audit</button>
+        </form>
+
+        <div id="seo-results" class="result">
+        </div>
+    </div>
+    <div id="loading-overlay">
+        <div id="loading-message" class="pulsating-text">Loading...</div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
